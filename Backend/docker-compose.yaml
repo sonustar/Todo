@@ -1,0 +1,17 @@
+services:
+  postgres:
+    image: postgres:15
+    container_name: smarrrt-db
+    ports:
+     - "5434:5432"
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${DB}
+    volumes:
+      - postgres-data:/data/db
+
+volumes:
+  postgres-data: 
+
+# if postgres-data no colon(:) issue is volumes must be mapping .       

@@ -1,4 +1,6 @@
 const express = require('express');
+const pool = require('../db/db.js')
+require('dotenv').config();
 
 
 
@@ -14,6 +16,16 @@ app.get('/',(req,res)=>{
 })
 
 
-app.listen(3000,()=>{
+app.listen(process.env.PORT,()=>{
   console.log(`App is running at port:3000`)
 })
+
+
+
+// First Simple things we need to do : 
+/*
+
+
+
+
+*/
